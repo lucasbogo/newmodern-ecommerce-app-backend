@@ -36,7 +36,7 @@ const expressJwt = require('express-jwt');
  * 
  * é possível testar as expressões regulares com regex tester em: regex101.com
  * 
- * 
+ *  testing git...
  * @returns expressJwt:
  */
 
