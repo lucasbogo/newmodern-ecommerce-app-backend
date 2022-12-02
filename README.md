@@ -4,7 +4,7 @@
 
 Aplicativo desenvolvido como trabalho obrigatório para a disciplina de **Projeto Integrador II** do curso de **Tecnologia em Ánalise e Desenvolvimento de Sistemas**. Este é repositório referente ao **BACK-END** da nossa aplicação. Portanto, eis aqui a **API NewModern Ecommerce**.
 <br>
-O repositório referente às telas da aplicação newmodern econtra-se neste repositório: [NewModern Ecommerce App Screens](https://github.com/lucasbogo/newmodern-ecommerce-app-screens)
+O repositório referente às telas da aplicação newmodern econtra-se neste repositório: [NewModern Ecommerce App Screens](https://github.com/lucasbogo/newmodern-ecommerce-app-frontend)
 
 ### Ferramentas, Tecnologias e Padrões utilizados neste projeto:
 
