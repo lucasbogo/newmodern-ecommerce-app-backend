@@ -1,6 +1,24 @@
 // Importar Mongoose. Mongoose é igual ao Eloquent ORM do Laravel. Realiza a comunicação do BD com a aplicação
 const mongoose = require('mongoose');
 
+/* Novos campos para o produto
+ *   
+
+    chip: req.body.chip,
+    color: req.body.color,
+    weight: req.body.weight,
+    system: req.body.system,
+    ram: req.body.ram,
+    internal_memory: req.body.internal_memory,
+    processor: req.body.processor,
+    digital: req.body.digital,
+    connectivity: req.body.connectivity,
+    front_camera_resolution: req.body.front_camera_resolution,
+    back_camera_resolution: req.body.back_camera_resolution,
+    front_camera_resources: req.body.front_camera_resources,
+    battery: req.body.battery,
+*/
+
 // Schema p/ Produto
 const productSchema = mongoose.Schema({
     // Nome é obrigatório
@@ -78,12 +96,65 @@ const productSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    chip: {
+        type: String,
+        default: ''
+    },
+    color: {
+        type: String,
+        default: ''
+    },
+    weight: {
+        type: Number,
+        default: ''
+    },
+    system: {
+        type: String,
+        default: ''
+    },
+    ram: {
+        type: Number,
+        default: ''
+    },
+    internal_memory: {
+        type: Number,
+        default: ''
+    },
+    processor: {
+        type: String,
+        default: ''
+    },
+    digital: {
+        type: String,
+        default: ''
+    },
+    connectivity: {
+        type: String,
+        default: ''
+    },
+    front_camera_resolution: {
+        type: Number,
+        default: ''
+    },
+    back_camera_resolution: {
+        type: Number,
+        default: ''
+    },
+    front_camera_resources: {
+        type: String,
+        default: ''
+    },
+    battery: {
+        type: Number,
+        default: ''
+    },
+
 })
 
 // Transformar _id para id e retirar __v da resposta json (front-end friendly)
-productSchema.method('toJSON', function(){
+productSchema.method('toJSON', function () {
     const { __v, ...object } = this.toObject();
-    const { _id:id, ...result } = object;
+    const { _id: id, ...result } = object;
     return { ...result, id };
 });
 

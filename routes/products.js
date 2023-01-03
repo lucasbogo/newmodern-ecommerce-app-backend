@@ -218,13 +218,26 @@ router.post(`/`, upload.single('image'), async (req, res) => {
         description: req.body.description,
         long_description: req.body.long_description,
         image: `${basePath}${fileName}`, // URL finalmente constuída!
-        brand: req.body.brand,
+        brand: req.body.brand, // Não está sendo usado no front-end pois categoria foi trocada para marca
         price: req.body.price,
         category: req.body.category,
         qty: req.body.qty,
         rating: req.body.rating,
         number_reviews: req.body.number_reviews,
-        featured: req.body.featured
+        featured: req.body.featured,
+        chip: req.body.chip,
+        color: req.body.color,
+        weight: req.body.weight,
+        system: req.body.system,
+        ram: req.body.ram,
+        internal_memory: req.body.internal_memory,
+        processor: req.body.processor,
+        digital: req.body.digital,
+        connectivity: req.body.connectivity,
+        front_camera_resolution: req.body.front_camera_resolution,
+        back_camera_resolution: req.body.back_camera_resolution,
+        front_camera_resources: req.body.front_camera_resources,
+        battery: req.body.battery,
     })
 
     // espera-se até salvar o produto, parte do async. Elimina bastante linhas de código. Alternativa à product.save().then()...
@@ -292,7 +305,20 @@ router.put('/:id', upload.single('image'), async (req, res) => {
             qty: req.body.qty,
             rating: req.body.rating,
             number_reviews: req.body.number_reviews,
-            featured: req.body.featured
+            featured: req.body.featured,
+            chip: req.body.chip,
+            color: req.body.color,
+            weight: req.body.weight,
+            system: req.body.system,
+            ram: req.body.ram,
+            internal_memory: req.body.internal_memory,
+            processor: req.body.processor,
+            digital: req.body.digital,
+            connectivity: req.body.connectivity,
+            front_camera_resolution: req.body.front_camera_resolution,
+            back_camera_resolution: req.body.back_camera_resolution,
+            front_camera_resources: req.body.front_camera_resources,
+            battery: req.body.battery,
         },
         // Mostrar dados novos
         { new: true }
